@@ -25,9 +25,17 @@ public class DB_util {
     }
 
     public static void createConnection(){
-        String url = ConfigReader.read("hr.database.url");
-        String username = ConfigReader.read("hr.database.username");
-        String password = ConfigReader.read("hr.database.password");
+
+        String url = ConfigReader.read("library2.database.url");
+        String username = ConfigReader.read("library2.database.username");
+        String password = ConfigReader.read("library2.database.password");
+       /* try {
+            connection = DriverManager.getConnection(url , username, password) ;
+            System.out.println("CONNECTION SUCCESSFUL");
+        } catch (Exception e) {
+            System.out.println("CONNECTION HAS FAILED " + e.getMessage() );
+        }*/
+        createConnection(url,username, password);
     }
 
     public static ResultSet runQuery(String sql){
@@ -36,7 +44,7 @@ public class DB_util {
             resultSet=statemnet.executeQuery(sql);
             resultSetMetaData=resultSet.getMetaData();
         } catch (Exception e) {
-            System.out.println("Error occured while running Query "+e.getMessage());
+            System.out.println("Error occurred while running Query "+e.getMessage());
         }
         return resultSet;
 
