@@ -9,30 +9,28 @@ public class Driver {
 
     private static WebDriver driver;
 
-    private Driver(){
-    }
+    private Driver(){}
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         String browserName = ConfigReader.read("browser");
-        if (driver==null){
-            switch (browserName){
-                case " chrome":
+        if (driver == null) {
+            switch (browserName) {
+                case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver();
+                    driver = new ChromeDriver();
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver=new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
                 default:
-                    driver=null;
-                    System.out.println("BrowserName is invald");
+                    driver = null;
+                    System.out.println("Unknown browser type " + browserName);
             }
             return driver;
-        }else{
+        } else {
             return driver;
         }
-
     }
 
     public static void closeBrowser(){
@@ -41,6 +39,9 @@ public class Driver {
             driver=null;
         }
     }
+
+
+
 
 
 

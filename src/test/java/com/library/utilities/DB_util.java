@@ -1,6 +1,8 @@
 package com.library.utilities;
 
 
+import org.openqa.selenium.WebElement;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -210,14 +212,31 @@ return cellValue;
     }
 
 
+    public static List<String> getColumnNamesAsList() {//trying out sample
+        //ResultSetMetaData rsmd;//holds column data
+        List<String> columnNames = new ArrayList<>();
+
+            try {
+                resultSetMetaData = resultSet.getMetaData();
+                for (int i = 1; i <= getColumnCount(); i++) {
+                    columnNames.add(resultSetMetaData.getColumnName(i));
+                }
+            } catch (Exception e) {
+                System.out.println("Error occurred getting column names " + e.getMessage());
+            }
+            resetCursor();
+
+        return columnNames;
+    }
 
 
 
-
-
-
-
-
+    /**
+     * SELECT COLUMN_NAME
+     *  FROM INFORMATION_SCHEMA.COLUMNS
+     *  WHERE TABLE_NAME = 'Your Table Name'
+     *  ORDER BY ORDINAL_POSITION
+     */
 
 
 }
