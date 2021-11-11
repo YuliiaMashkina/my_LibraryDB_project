@@ -11,8 +11,9 @@ import org.junit.runner.RunWith;
         publish = true,//it will give you a link to local html report
         plugin = {"pretty", "html:target/cucumber.html",
         "rerun:target/rerun.txt",
-        "me.jvt.cucumber.report.PrettyReports:target"},
-        dryRun = true,
+        "me.jvt.cucumber.report.PrettyReports:target"
+        },
+        dryRun = false,
         tags="@us02"
 )
 
