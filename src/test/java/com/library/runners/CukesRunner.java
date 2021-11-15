@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         "rerun:target/rerun.txt",
         "me.jvt.cucumber.report.PrettyReports:target"
         },
-        dryRun = false,
-        tags="@us04"
+        dryRun = true,
+        tags="@us05"
 )
 
 public class CukesRunner {
