@@ -32,6 +32,22 @@ public class BookPage {
     public WebElement year;
 
 
+    //Borrowing Books
+
+    @FindBy(xpath = "//tbody/tr/td/a")
+    public WebElement borrowBookBtn;
+
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public List<WebElement> listOfBorrowedBookNamed;
+
+    @FindBy(xpath = "//tbody/tr/td[6]")
+    public List<WebElement> listOfisReturned;
+
+
+
+
+
+
 
     public WebElement editBook(String book) {
         String xpath = "//td[3][.='" + book + "']/../td/a";

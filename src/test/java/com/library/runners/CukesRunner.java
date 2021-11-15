@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         "me.jvt.cucumber.report.PrettyReports:target"
         },
         dryRun = false,
-        tags="@us06"
+        tags="@us7"
 )
 
 public class CukesRunner {
