@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>14 Nov 2021, 19:35</td>
+      <td>14 Nov 2021, 20:00</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">As a data consumer, I want UI and DB book information are match</td>
-          <td      class="passed"    >1</td>
+          <td      class="passed"    >5</td>
           <td >0</td>
-          <td     class="skipped"   >3</td>
           <td >0</td>
-          <td   class="undefined" >1</td>
+          <td >0</td>
+          <td >0</td>
           <td class="total">5</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="1000000">0.001</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="2535000000">2.535</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
   <span class="name">As a data consumer, I want UI and DB book information are match</span>
 
@@ -195,12 +195,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">2.535</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">verify book information with DB</span>
 
@@ -211,7 +211,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
@@ -231,9 +231,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-              <span class="location name">com.library.step_defs.Hooks.setupDriver()</span>
+              <span class="location name">com.library.step_defs.Hooks.createConnection()</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.756</span>
 
           </div>
 
@@ -247,9 +247,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-              <span class="location name">com.library.step_defs.Hooks.createConnection()</span>
+              <span class="location name">com.library.step_defs.Hooks.setupDriver()</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.970</span>
 
           </div>
 
@@ -266,9 +266,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -278,7 +278,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -286,7 +286,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">I am in the homepage of library app</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.675</span>
 
 </div>
 
@@ -309,11 +309,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When undefined">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">I navigate to &quot;Books&quot; page</span>
+  <span class="name">I navigate to <span class="argument">&quot;Books&quot;</span> page</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.481</span>
 
 </div>
 
@@ -336,11 +336,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">I open a book called &quot;Chordeiles minor&quot;</span>
+  <span class="name">I open a book called <span class="argument">&quot;Chordeiles minor&quot;</span></span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">1.326</span>
 
 </div>
 
@@ -363,11 +363,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">I execute query to get the book information from books table</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.051</span>
 
 </div>
 
@@ -390,11 +390,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">verify book DB and UI information must match</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -439,7 +439,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.library.step_defs.Hooks.dbTearDown()</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
           </div>
 
@@ -455,7 +455,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.library.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.091</span>
 
           </div>
 

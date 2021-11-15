@@ -96,22 +96,32 @@ public class DB_util {
         return columnCount;
     }
 
-    public static List<String> getRowDataAsList(int rowNum){
-        List<String> rowDataList = new ArrayList<>();
-        int columnCount = getColumnCount();
+    public static List<String> getRowDataAsList( int rowNum ){
+
+        List<String> rowDataAsLst = new ArrayList<>();
+        int colCount =  getColumnCount() ;
 
         try {
-            resultSet.absolute(rowNum);
-            for (int i = 1; i < columnCount; i++) {
-                rowDataList.add(resultSet.getString(i));
+            resultSet.absolute( rowNum );
+
+            for (int colIndex = 1; colIndex <= colCount ; colIndex++) {
+
+                String cellValue =  resultSet.getString( colIndex ) ;
+                rowDataAsLst.add(   cellValue  ) ;
+
             }
+
+
         } catch (Exception e) {
-            System.out.println("Error occurred while getRowDataAsList "+e.getMessage());
+            System.out.println("ERROR OCCURRED WHILE getRowDataAsList " + e.getMessage() );
         }finally {
             resetCursor();
         }
-    return rowDataList;
+
+
+        return rowDataAsLst ;
     }
+
 
     public static String getCellValue(int rowNum, int columnIndex){
         String cellValue = "";
